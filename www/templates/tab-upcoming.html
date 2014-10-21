@@ -1,0 +1,12 @@
+<ion-view title="Upcoming Movies">
+  <ion-content>
+    <ion-list>
+    <ion-item ng-repeat="movie in upcoming" class="item-thumbnail-left item-text-wrap" href="#/tab/movie/{{ movie.ImdbCode }}">
+        <img src="{{ movie.MovieCover }}" />
+        <h2>{{ movie.MovieTitle }}</h2>
+        <p>IMDB: <a href="{{ movie.ImdbLink }}">{{ movie.ImdbCode }}</a></p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,18 @@
+<ion-view title="Accepted Movies">
+  <ion-content>
+    <div ng-repeat="movie in accepted" class="list card">
+      <div class="item item-thumbnail-left item-text-wrap">
+        <img src="{{ movie.CoverImage }}">
+        <h2 ng-bind-html="movie.MovieTitle"></h2>
+        <i class="ion ion-pricetags"> {{ movie.Genre }}</i>
+        <i class="ion ion-thumbsup"> {{ movie.Votes }}</i>
+      </div>
+
+      <div class="item item-body">
+        <p ng-bind-html="movie.ShortDescription"></p>
+        <p>IMDB: <a href="{{ movie.ImdbLink }}">{{ movie.ImdbCode }}</a></p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+

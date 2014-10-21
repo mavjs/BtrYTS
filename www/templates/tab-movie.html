@@ -1,0 +1,63 @@
+<ion-view title="Movie Details">
+  <ion-content>
+  <div class="list card" ng-if="movie.error">
+      <div class="item item-divider assertive">
+          <h2>Error</h2>
+      </div>
+
+      <div class="item item-text-wrap">
+          This movie is not listed on <a href="https://yts.re">YIFFY Database</a> yet.
+      </div>
+
+      <div class="item item-divider energized">
+          Sorry for the inconvenience!
+      </div>
+
+  </div>
+  <div class="list card" ng-if="!movie.error">
+
+      <div class="item item-avatar item-text-wrap">
+        <img src="{{ movie.LargeCover }}">
+        <h2 ng-bind-html="movie.MovieTitle"></h2>
+        <i class="icon ion-ios7-pie"> {{ movie.Size }}</i>
+      </div>
+
+      <div class="item item-body item-text-wrap">
+          <img src="{{ movie.MediumCover }}">
+          <p>
+            {{ movie.ShortDescription }}
+          </p>
+      </div>
+
+      <div class="item item-image">
+          <div class="video-container">
+              <iframe class='youtube-player' type='text/html' width='640' height='390' ng-src='{{yt()}}' frameborder='0'></iframe>
+          </div>
+      </div>
+
+      <div class="item item-text-wrap">
+          <i class="ion ion-person-stalker">
+          </i>
+          <span ng-repeat="cast in movie.CastList">
+              {{ cast.ActorName }}<span ng-if="!$last">, 
+          </span>
+      </div>
+      
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <span class="tab-item">
+          <i class="icon ion-ios7-world"></i>
+          {{ movie.Language }}
+        </span>
+        <span class="tab-item">
+          <i class="icon ion-ios7-bolt"></i>
+          {{ movie.Quality }}
+        </span>
+        <span class="tab-item">
+          <i class="icon ion-ios7-pulse-strong"></i>
+          {{ movie.TorrentSeeds }}
+        </span>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-positive tabs-icon-only">
+
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="Upcoming" icon="icon ion-ios7-pulse-strong" href="#/tab/upcoming">
+    <ion-nav-view name="tab-upcoming"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="Confirmed" icon="icon ion-checkmark-circled" href="#/tab/confirmed">
+    <ion-nav-view name="tab-confirmed"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="Accepted" icon="icon ion-plus-circled" href="#/tab/accepted">
+    <ion-nav-view name="tab-accepted"></ion-nav-view>
+  </ion-tab>
+  
+  <ion-tab title="About" icon="icon ion-information-circled" href="#/tab/about">
+    <ion-nav-view name="tab-about"></ion-nav-view>
+  </ion-tab>
+  
+</ion-tabs>

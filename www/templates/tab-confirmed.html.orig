@@ -1,0 +1,13 @@
+<ion-view title="Confirmed">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="movie in confirmed" class="item-thumbnail-left item-text-wrap">
+        <img src="{{ movie.CoverImage }}" />
+        <h2 ng-bind-html="movie.MovieTitle"></h2>
+        <p ng-bind-html="movie.ShortDescription"></p>
+        <p>IMDB: <a href="{{ movie.ImdbLink }}">{{ movie.ImdbCode }}</a></p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
