@@ -17,13 +17,13 @@
   <div class="list card" ng-if="!movie.error">
 
       <div class="item item-avatar item-text-wrap">
-        <img src="{{ movie.LargeCover }}">
+        <img src="{{ movie.LargeCover }}" />
         <h2 ng-bind-html="movie.MovieTitle"></h2>
         <i class="icon ion-ios7-pie"> {{ movie.Size }}</i>
       </div>
 
       <div class="item item-body item-text-wrap">
-          <img src="{{ movie.MediumCover }}">
+          <img src="{{ movie.MediumCover }}" />
           <p>
             {{ movie.ShortDescription }}
           </p>
