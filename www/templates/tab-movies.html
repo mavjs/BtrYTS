@@ -1,0 +1,11 @@
+<ion-view title="Movies">
+  <ion-content>
+    <ion-list>
+    <ion-item ng-repeat="movie in movies" class="item-thumbnail-left item-text-wrap">
+        <img src="{{ movie.CoverImage }}" />
+        <h2>{{ movie.MovieTitle }}</h2>
+        <p>IMDB: <a href="{{ movie.ImdbLink }}">{{ movie.ImdbCode }}</a></p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

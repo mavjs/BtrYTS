@@ -27,6 +27,13 @@ angular.module('starter.controllers', [])
   });
 })
 
+.controller('MoviesCtrl', function($scope, $http) {
+  $scope.movies = [];
+  $http.get('https://yts.re/api/list.json').success(function(data) {
+    $scope.movies = data['MovieList'];
+  });
+})
+
 .controller('MovieCtrl', function($scope, $http, $stateParams, $sce) {
   $http.get('https://yts.re/api/listimdb.json',
     { params: {
@@ -41,7 +48,6 @@ angular.module('starter.controllers', [])
                 }
             })
             .success(function(data) {
-                console.log(data);
                 $scope.movie = data;
                 $scope.yt = function() { return $sce.trustAsResourceUrl( 'http://www.youtube.com/embed/'+$scope.movie.YoutubeTrailerID ); }
             });

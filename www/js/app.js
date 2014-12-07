@@ -51,6 +51,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state('tab.movies', {
+      url: '/movies',
+      views: {
+        'tab-movies': {
+          templateUrl: 'templates/tab-movies.html',
+          controller: 'MoviesCtrl'
+        }
+      }
+    })
+
     .state('tab.confirmed', {
       url: '/confirmed',
       views: {
